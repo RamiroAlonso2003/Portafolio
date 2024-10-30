@@ -1,0 +1,268 @@
+
+:root {
+    --colorPrincipal: #F4F4F9;
+    --headerPrincipal: #A1C181;
+    --colorSecundario: #233D4D;
+  }
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-color:var(--colorPrincipal);
+
+    padding: 2rem;
+    background-image: url('./fondos.webp'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+header {
+    padding: 0em;
+    background-color:var(--headerPrincipal);
+    color: var(--colorPrincipal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    padding: 2em;
+    max-width: 1250px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid var(--colorPrincipal);
+    border-radius: 8px;
+}
+
+
+#Conocimiento_General{
+    padding: 0px;
+    min-height: 50vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+
+#Resumen_General{
+    display: block;
+    list-style: none;
+    background-color:var(--colorSecundario);
+    width: 30%;
+    font-size: 25px;
+    color: #fff;
+}
+
+.informacion {
+    flex: 1;
+    padding: 1rem;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: var(--colorSecundario);
+}
+
+a {
+    color: #1E90FF;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5em;
+    border: none;
+    background: none;
+    font-size: 1.2em;
+}
+
+/* Sección de conocimientos */
+.conocimientos {
+    text-align: center;
+}
+
+.conocimientos h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Contenedor de habilidades */
+.tecnologias{
+    display:block
+}
+
+.tecnologias h2{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Estilo de cada tarjeta de habilidad */
+.skill {
+    background-color: var(--colorSecundario);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.skill img {
+    width: 24px;
+    height: 24px;
+}
+
+.skill span {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Efecto hover */
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.proyectos {
+    text-align: left;
+}
+
+.proyectos h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Cada proyecto */
+.proyecto {
+
+    
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.proyecto h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estado {
+    background-color: #d32f2f;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+
+.contenido-proyecto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenido-proyecto img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.contenido-proyecto p {
+    flex: 1;
+    margin-top: 0;
+    font-size: 0.9em;
+    color: #c4c4c4;
+}
+
+/* Iconos de tecnologías */
+.tecnologias {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tecnologias span
+
+.icono-java::before {
+    content: url('iconos/java-icon.png'); /* Cambia 'java-icon.png' por el nombre real del archivo */
+}
+
+.icono-html::before {
+    content: url('iconos/html-icon.png'); /* Cambia 'html-icon.png' por el nombre real del archivo */
+}
+
+.icono-css::before {
+    content: url('iconos/css-icon.png'); /* Cambia 'css-icon.png' por el nombre real del archivo */
+}
+
+.icono-js::before {
+    content: url('iconos/js-icon.png'); /* Cambia 'js-icon.png' por el nombre real del archivo */
+}
+
+.icono-nodejs::before {
+    content: url('iconos/nodejs-icon.png'); /* Cambia 'nodejs-icon.png' por el nombre real del archivo */
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.boton {
+    background-color: #444a5a;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    width: 150px;
+    height: 20px;
+}
+
+.boton:hover {
+    background-color: #626b82;
+}
+
+
+
+/* Modo oscuro */
+body.dark {
+    background-color: #233D4D;
+    color: #ffffff;
+}
+
+body.dark header {
+    background-color: #444;
+}
+
+body.dark section {
+    border-color: #555;
+}
