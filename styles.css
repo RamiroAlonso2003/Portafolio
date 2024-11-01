@@ -2,7 +2,7 @@
 :root {
     --colorPrincipal: #F4F4F9;
     --colorSecundario: #090b42;
-    --colorPrincipalBlack: #233D4D;
+    --colorPrincipalBlack: #313338;
   }
 
 /* Estilos generales */
@@ -12,6 +12,7 @@ body {
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
     background-color:var(--colorPrincipal);
+    color: var(--colorSecundario);
 }
 
 header {
@@ -24,12 +25,20 @@ header {
     position: sticky;
     top: 0;
     height: 8vh;
+    transition: background-color 0.3s;
 }
 
 section {
     padding: 1em;
 }
 
+.titulo{
+    font-size: 2rem;
+    text-align: center;
+    margin: 2px auto;
+    margin-top: 5px;
+    display:block
+}
 
 #Conocimiento_General{
     height: 90vh; /* Ocupa toda la pantalla */
@@ -44,6 +53,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
     
 }
 
@@ -116,7 +126,14 @@ button {
 }
 
 /* Contenedor de habilidades */
+.tecnologias{
+    background-color: var(--colorPrincipal);
+    color: #d32f2f;
+}
+
+
 .tecnologias h1{
+    margin-top: 5px;
     display:block
 }
 
@@ -133,18 +150,21 @@ button {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    
 }
 
 /* Estilo de cada tarjeta de habilidad */
 .skill {
     background-color: var(--colorSecundario);
     padding: 0.5rem 1rem;
-    border-radius: 1.5rem;
+    border-radius: .5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s;
+    text-align: center;
+    border: 2px solid var(--colorPrincipal);
 }
 
 .skill img {
@@ -154,7 +174,7 @@ button {
 
 .skill span {
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 /* Efecto hover */
@@ -163,20 +183,17 @@ button {
 }
 
 .proyectos {
-    text-align: left;
-}
-
-.proyectos h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    max-width: 800px;
+    text-align: center;
 }
 
 /* Cada proyecto */
 .proyecto {
-
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .proyecto h2 {
@@ -186,6 +203,26 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+
+.proyecto p {
+    margin-bottom: 1rem;
+}
+.proyecto img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.technologies span {
+    display: inline-block;
+    background-color: transparent;
+    color: #6b4eff;
+    border: 1px solid #6b4eff;
+    border-radius: 12px;
+    padding: 0.3rem 0.7rem;
+    margin: 0 0.2rem;
+    font-size: 0.9rem;
+}
+
 
 .estado {
     background-color: #d32f2f;
@@ -214,14 +251,7 @@ button {
     color: #c4c4c4;
 }
 
-/* Iconos de tecnologías */
-.tecnologias {
-    display: block;
-    gap: 10px;
-    background-color: #444a5a;
-}
-
-.tecnologias span
+/* Iconos de tecnologías */ 
 
 .icono-java::before {
     content: url('iconos/java-icon.png'); /* Cambia 'java-icon.png' por el nombre real del archivo */
@@ -266,18 +296,17 @@ button {
     background-color: #626b82;
 }
 
-
-
 /* Modo oscuro */
 body.dark {
-    background-color: #233D4D;
+    background-color:var(--colorPrincipalBlack);
     color: #ffffff;
 }
 
 body.dark header {
     background-color: var(--colorPrincipalBlack);
+    color: var(--colorPrincipal);
 }
 
 body.dark section {
-    border-color: #555;
+    border-color: #000000
 }
