@@ -1,63 +1,123 @@
-
 :root {
     --colorPrincipal: #F4F4F9;
     --colorSecundario: #090b42;
-    --colorPrincipalBlack: #313338;
-  }
+    --colorPrincipalBlack: #1e1e1e;
+    --colorSecundarioBlack: #2196c7;
+    --fuentePrincipal: "Oswald", sans-serif;
+    --tamañoLetra: 16px;
+    --espacioLetra: 1.5;
+    --colorFondo: #ffffff;
+    --colorTexto: #000000;
+    --colorBorde: #dddddd;
+    --colorSombra: #cccccc;
+}
 
 /* Estilos generales */
 body {
-    font-family: "Oswald", sans-serif;
+    font-family: var(--fuentePrincipal);
+    font-size: var(--tamañoLetra);
+    line-height: var(--espacioLetra);
     margin: 0;
     padding: 0;
+    background-color: var(--colorFondo);
+    color: var(--colorTexto);
     transition: background-color 0.3s, color 0.3s;
-    background-color:var(--colorPrincipal);
+}
+
+section {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionGeneral {
+    width: 90%;
+    max-width: 100rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 2rem;
+    text-align: start;
+    margin: 5px auto;
+    display: block;
     color: var(--colorSecundario);
 }
 
 header {
-    padding: 0em;
-    background-color:#ffffff;;
+    padding: 1.5rem 3.5rem;
+    background-color: #ffffff;
     color: var(--colorSecundario);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
-    height: 8vh;
+    z-index: 10;
+    height: 5vh;
+    transition: background-color 0.3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li .linkNavs {
+    text-decoration: none;
+    color: var(--colorSecundario);
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-size: 1.5rem
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: rgb(13, 173, 144);
+    border-bottom: 2px solid var(--colorPrincipalBlack);
+}
+
+#contact-button {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-section {
-    padding: 1em;
-}
-
-.titulo{
+#SobreMi p {
     font-size: 2rem;
-    text-align: center;
-    margin: 2px auto;
-    margin-top: 5px;
-    display:block
 }
 
-#Conocimiento_General{
-    height: 90vh; /* Ocupa toda la pantalla */
+#Conocimiento_General {
+    height: 90vh;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
-    background-image: linear-gradient(
-        rgba(42, 2, 61, 0.5),
-        rgba(0, 0, 0, 0.5))
-         ,url(./fondos.webp); /* Reemplaza con la ruta de tu imagen */
+    background-image: linear-gradient(rgba(42, 2, 61, 0.5), rgba(0, 0, 0, 0.5)), url(./fondos.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    
 }
 
-#Conocimiento_General h1{
+#Conocimiento_General h1 {
     color: var(--colorPrincipal);
     font-size: 6rem;
     text-transform: uppercase;
@@ -67,16 +127,15 @@ section {
     padding-top: 10vh;
 }
 
-#Conocimiento_General p{
+#Conocimiento_General p {
     font-size: 3rem;
     text-align: center;
     width: 80%;
     line-height: 1.6;
     margin: 2rem auto;
-    
 }
 
-.links-container{
+.links-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -85,24 +144,22 @@ section {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 450px;
-    margin: 0px auto;
+    margin: 0 auto;
     justify-content: space-evenly;
 }
 
-/* Estilo de cada tarjeta de habilidad */
-
 .links img {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  transition: transform 0.2s;
-  padding: 5px;
-  margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    padding: 5px;
+    margin: 5px;
 }
 
 .links img:hover {
     transform: scale(1.1);
-  }
+}
 
 .links span {
     color: #000000;
@@ -125,19 +182,12 @@ button {
     font-size: 1.2em;
 }
 
-/* Contenedor de habilidades */
-.tecnologias{
+.tecnologias {
     background-color: var(--colorPrincipal);
     color: #d32f2f;
 }
 
-
-.tecnologias h1{
-    margin-top: 5px;
-    display:block
-}
-
-.tecnologias h2{
+.tecnologias h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
     display: flex;
@@ -150,12 +200,10 @@ button {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    
 }
 
-/* Estilo de cada tarjeta de habilidad */
 .skill {
-    background-color: var(--colorSecundario);
+    background-color: #1e1e1e;
     padding: 0.5rem 1rem;
     border-radius: .5rem;
     display: flex;
@@ -177,39 +225,51 @@ button {
     font-size: 1.5rem;
 }
 
-/* Efecto hover */
 .skill:hover {
     transform: scale(1.05);
 }
 
 .proyectos {
-    max-width: 800px;
-    text-align: center;
+    width: 90%;
+    max-width: 100rem;
+    margin: 0 auto;
 }
 
-/* Cada proyecto */
-.proyecto {
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 5rem;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.project {
     background-color: #1e1e1e;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    color: #ffffff;
+    padding: 1rem;
+    width: calc(45% - 1rem);
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.proyecto h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    text-align: left;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }
 
-.proyecto p {
+.project h2 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    color: #b0b0b0;
     margin-bottom: 1rem;
 }
-.proyecto img {
-    width: 100%;
-    border-radius: 8px;
+
+.technologies {
+    margin-bottom: 1rem;
 }
 
 .technologies span {
@@ -223,57 +283,11 @@ button {
     font-size: 0.9rem;
 }
 
-
-.estado {
-    background-color: #d32f2f;
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 0.8em;
-}
-
-.contenido-proyecto {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.contenido-proyecto img {
-    width: 200px;
-    height: auto;
+.project img {
+    width: 100%;
     border-radius: 8px;
-    margin-right: 20px;
 }
 
-.contenido-proyecto p {
-    flex: 1;
-    margin-top: 0;
-    font-size: 0.9em;
-    color: #c4c4c4;
-}
-
-/* Iconos de tecnologías */ 
-
-.icono-java::before {
-    content: url('iconos/java-icon.png'); /* Cambia 'java-icon.png' por el nombre real del archivo */
-}
-
-.icono-html::before {
-    content: url('iconos/html-icon.png'); /* Cambia 'html-icon.png' por el nombre real del archivo */
-}
-
-.icono-css::before {
-    content: url('iconos/css-icon.png'); /* Cambia 'css-icon.png' por el nombre real del archivo */
-}
-
-.icono-js::before {
-    content: url('iconos/js-icon.png'); /* Cambia 'js-icon.png' por el nombre real del archivo */
-}
-
-.icono-nodejs::before {
-    content: url('iconos/nodejs-icon.png'); /* Cambia 'nodejs-icon.png' por el nombre real del archivo */
-}
-
-/* Botones */
 .botones {
     display: flex;
     gap: 10px;
@@ -296,17 +310,44 @@ button {
     background-color: #626b82;
 }
 
-/* Modo oscuro */
 body.dark {
-    background-color:var(--colorPrincipalBlack);
+    background-color: var(--colorPrincipalBlack);
     color: #ffffff;
 }
 
 body.dark header {
     background-color: var(--colorPrincipalBlack);
-    color: var(--colorPrincipal);
 }
 
+body.dark header nav ul li .linkNavs {
+    color: var(--colorSecundarioBlack);
+}
+
+body.dark header #contact-button{
+    background-color: var(--colorSecundarioBlack);
+}
+
+
 body.dark section {
-    border-color: #000000
+    border-color: #000000;
+}
+
+body.dark section .titulo {
+    color: var(--colorSecundarioBlack);
+}
+
+/* Estilos para responsividad */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: 100%;
+    }
+    .project img {
+        width: 100%;
+    }
 }
