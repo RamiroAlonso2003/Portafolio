@@ -351,3 +351,12 @@ body.dark section .titulo {
         width: 100%;
     }
 }
+
+@media (max-width: 480px) {
+    #Conocimiento_General.informacion p {
+        display: none; /* Cambia visibility a display */
+       background-color: #6b4eff;
+    }
+}
+
+
